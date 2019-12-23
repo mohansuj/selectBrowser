@@ -1,0 +1,22 @@
+public WebDriver selectBrowser(String browsername, String baseurl)
+{		
+    browsername.toLowerCase();
+		switch(browsername)
+		{
+		  case "chrome":
+				System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
+				driver = new ChromeDriver();
+				break;
+			
+			case "firefox":
+				System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
+				driver = new FirefoxDriver();
+				break;
+			
+			default: System.out.println("Invalid Choice");
+			System.exit(0);
+		}
+		driver.get(baseurl);
+		driver.manage().window().maximize();
+		return driver;
+}
