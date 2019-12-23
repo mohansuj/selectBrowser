@@ -1,2 +1,2 @@
 # selectBrowser
-Code for the selection of Browser
+This project highlights the method for the selection of Browser.
